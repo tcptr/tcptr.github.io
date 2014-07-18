@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>multiplex</title>
+    <link rel="stylesheet" href="resources/multiplex.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="base" class="photograph">
+        <img src="images/multiplex_game.png">
+      </div>
+      <h1>
+        <a href="multiplex.html">multiplex</a> &gt;
+        ゲームについて
+      </h1>
+      <div id="left">
+        <h2>Player</h2>
+        <p>プレイヤーは白い自機を二つのスティックを使って操作します。自機はステージ内を制限なく上下左右に移動し、ショットを放つことができます。このゲームの目的はひたすら逃げて生き延びることです。</p>
+        <h2>pulseモード</h2>
+        <p>オーソドックスなモードです。現在はこのモードのみです。</p>
+        <p>プレイヤーはショットの他にボムを使用できます。ボムを使用することで周囲の敵を一掃できますが、1ゲームでの使用回数に制限があります。</p>
+        <p>レベルは一定時間ごとに上昇し、レベルアップ時に敵は一旦全滅します。5の倍数のレベルに到達するごとにロックが解除され、新たにそこから開始できるようになります。</p>
+        <h2>ハイスコアを目指す</h2>
+        <ul>
+          <li>敵を倒すと、敵の基本スコアにレベルに応じた倍率((1+level)^2)がかかってスコアに加算されます。</li>
+          <li>Gateで巻き込んで敵を倒すと、通常の5倍のスコアが得られます。</li>
+          <li>ボムによる破壊はスコアを得られません。</li>
+          <li>レベルアップ時に消滅する敵からは、1/5のスコアが得られます。</li>
+        </ul>
+      </div>
+      <div id="right">
+        <h2>Enemys <span class="gray">(score)</span></h2>
+        <dl>
+          <dt>Missile <span class="gray">(50)</span></dt>
+          <dd>速い速度で直線上を往復し続ける。</dd>
+          <dt>Turtle <span class="gray">(20)</span></dt>
+          <dd>まとわりつくように自機を追尾し、自機のショットを回避しようとする。</dd>
+          <dt>Gear <span class="gray">(15)</span></dt>
+          <dd>ゆっくり加速しながらと自機に近づく。</dd>
+          <dt>Shuriken <span class="gray">(30)</span></dt>
+          <dd>ショットを何度か耐えることができ、ダメージを受けるほど加速して自機を追いかける。</dd>
+          <dt>Gate <span class="gray">(100)</span></dt>
+          <dd>耐久力があり、一度攻撃すると周囲の敵を飲み込み体力を回復し始める。敵を飲み込みすぎると炸裂して強力なShurikenとMissileを生み出す。破壊に成功したとき、周囲の敵を巻き込んで消滅する。</dd>
+          <dt>Sphere <span class="gray">(10)</span></dt>
+          <dd>ゆったりと漂う。</dd>
+          <dt>Connect <span class="gray">(200)</span></dt>
+          <dd>後ろにスコアのないキューブを残しつつフィールドを直進し続ける。</dd>
+        </dl>
+      </div>
+      <address>
+        <a href="./">tcptr.github.io</a> / 
+        <a href="https://twitter.com/tcptr">@tcptr</a> / 
+        <a href="https://twitter.com/AttaQjp">@AttaQjp</a> / 
+        <a href="http://www.kawaz.org/">Kawaz community</a>
+      </address>
+    </div>
+  </body>
+</html>

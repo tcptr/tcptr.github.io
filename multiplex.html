@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>multiplex</title>
+    <link rel="stylesheet" href="resources/multiplex.css">
+    <script src="resources/jquery.js"></script>
+    <script>
+      $(function(){
+        var $base = $('#base');
+
+        var pages = [];
+        for (var i=0; i<9; ++i) {
+          var $page = $('<div class="photograph"></div>');
+          $page.css({
+            backgroundImage: 'url(images/multiplex_' + i + '.png)',
+            opacity: 0
+          });
+          $base.append($page);
+          pages.push($page);
+        }
+
+        var index = 0;
+        pages[0].css({ opacity: 1 });
+
+        function change(i) {
+          var current = index;
+          var next = index = (i + pages.length) % pages.length;
+          pages[current]
+            .stop(true, true)
+            .css({ zIndex: 0 });
+          pages[next]
+            .css({ zIndex: 1, opacity: 0 })
+            .animate({ opacity: 1 }, function(){
+              pages[current].css({ opacity: 0 });
+            });
+        }
+
+        $('#prev').on('click', function(){
+          change(index - 1);
+        });
+
+        $('#next').on('click', function(){
+          change(index + 1);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="base" class="photograph">
+      </div>
+      <h1>multiplex</h1>
+      <a href="#" id="prev">&lt;</a>
+      <a href="#" id="next">&gt;</a>
+      <div id="left">
+        <h2>概要</h2>
+        <p>このゲームはGeometry Warsに強く影響された全方位物量STGです。
+        二つのスティックで自機を操作して、ひたすら長い生存を目指します。</p>
+        <h2>動作環境</h2>
+        <p>以下の環境で動作確認しています。</p>
+        <ul>
+          <li>Windows 8</li>
+          <li>OS X 10.8-</li>
+          <li>Arch Linux</li>
+        </ul>
+        <p>そこそこのグラフィック性能が必要です。現在、異なる環境ではリプレイファイルを正常に同期できていません。</p>
+        <h2>詳細</h2>
+        <p><a href="https://attaq.bandcamp.com/album/multiplex-ost">SoundTrack</a> / <a href="multiplex_config.html">設定について</a> / <a href="multiplex_game.html">ゲームについて</a></p>
+      </div>
+      <div id="right">
+        <h2>ダウンロード (1.1)</h2>
+        <p>このゲームは無料で遊べます。</p>
+        <ul>
+          <li><a href="https://github.com/tcptr/multiplex/releases/download/1.1/multiplex_win32.zip">Windows binary</a></li>
+          <li><a href="https://github.com/tcptr/multiplex/releases/download/1.1/multiplex_osx.zip">OS X binary</a></li>
+          <li><a href="https://github.com/tcptr/multiplex">Source code (github)</a></li>
+        </ul>
+        <h2>その他</h2>
+        <p>multiplexは以下のライブラリ/リソースを使用しています。</p>
+        <ul>
+          <li><a href="http://www.glfw.org/">GLFW</a></li>
+          <li><a href="http://kcat.strangesoft.net/openal.html">OpenAL Soft</a></li>
+          <li><a href="http://www.vector.co.jp/soft/data/writing/se119277.html">KST32B フォント</a></li>
+          <li><a href="http://www.nothings.org/">stb_vorbis/stb_image</a></li>
+        </ul>
+      </div>
+      <address>
+        <a href="./">tcptr.github.io</a> / 
+        <a href="https://github.com/tcptr">@tcptr</a> / 
+        <a href="https://twitter.com/AttaQjp">@AttaQjp</a> / 
+        <a href="http://www.kawaz.org/">Kawaz community</a>
+      </address>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-size:14px;
+  line-height:1.6;
+  background:#ecf0f1;
+  color:#222;
+  font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+a{
+  color:#35b;
+  transition:0.5s;
+}
+a:hover{
+  color:#e43;
+}
+
+.photograph{
+  background-size:cover;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+#movie{
+  z-index:3;
+  position:fixed;
+  background:rgba(0,0,0,0.85);
+  opacity:0;
+  display:none;
+}
+#movie video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-512px;
+  margin-top:-288px;
+  width:1024px;
+  height:576px;
+  border:1px solid #123;
+}
+#movie .notice{
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  text-align:center;
+  color:#fff;
+}
+#movie .close{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:430px;
+  margin-top:-330px;
+  background:#48d;
+  color:#fff;
+  padding:5px 20px;
+}
+#movie .close:hover{
+  background:#7bf;
+}
+#main{
+  position:relative;
+  margin:0 auto 100px;
+  width:900px;
+  background:#fff;
+  z-index:2;
+}
+#base{
+  width:900px;
+  height:400px;
+  top:60px;
+  text-align:center;
+}
+h1{
+  font-size:16px;
+  padding-left:50px;
+  line-height:60px;
+  color:#57a;
+}
+#prev, #next{
+  position:absolute;
+  top:60px;
+  width:100px;
+  line-height:400px;
+  text-align:center;
+  text-decoration:none;
+  font-weight:bold;
+  opacity:0;
+  z-index:2;
+}
+#prev:hover, #next:hover{
+  opacity:1;
+}
+#prev{
+  left:0;
+  background:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+#next{
+  left:800px;
+  background:linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+#left{
+  float:left;
+  margin:400px 0 0;
+  width:450px;
+}
+#right{
+  margin:400px 0 0;
+  float:right;
+  width:450px;
+}
+h2{
+  font-size:16px;
+  color:#57a;
+  margin:15px 30px 5px;
+  padding:0;
+}
+p,ul,dl{
+  margin:5px 30px 10px;
+}
+dt{
+  font-weight:bold;
+  color:#578;
+}
+li,dd{
+  margin:0 20px;
+}
+address{
+  clear:both;
+  padding:20px 40px;
+  text-align:right;
+  color:#566;
+}
+address a{
+  color:#678;
+}
+.gray{
+  color:#aaa;
+  font-weight:normal;
+}
+.open{
+  position:absolute;
+  display:block;
+  top:50%;
+  left:50%;
+  width:100px;
+  line-height:100px;
+  margin-top:-50px;
+  margin-left:-50px;
+  font-size:14px;
+  text-align:center;
+  text-decoration:none;
+  border:1px solid #5ae;
+  z-index:3;
+  border-radius:10px;
+  color:#5ae;
+  background:#000;
+}
+.open:hover{
+  border-color:#e43;
+}
+

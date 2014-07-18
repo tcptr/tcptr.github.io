@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background:#ecf0f1;
+  font-size:93%;
+  color:#34495e;
+  line-height:1.6;
+  font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+#page{
+  margin:0 auto;
+  padding:2em 0;
+  background:#fff;
+}
+
+/* inline */
+a{
+  color:#3498db;
+  text-decoration:none;
+  transition:0.5s;
+}
+a:hover{
+  color:#e74c3c;
+}
+img{
+  border:none;
+  margin:0.1em;
+}
+em, strong{
+  font-style:normal;
+  font-weight:bold;
+  border-bottom:2px solid #c0392b;
+}
+code{
+  background:#fff;
+}
+
+/* block */
+h1{
+  font-size:140%;
+  text-align:center;
+  padding:2em 0 0;
+}
+h2{
+  font-size:100%;
+  margin:1.5em 2em 1em;
+  padding:0 1em;
+  color:#235;
+  border-bottom:5px solid #ecf0f1;
+}
+h3, h4, h5, h6{
+  font-size:100%;
+  margin:1.5em 3em 1em;
+  color:#235;
+}
+p, ul, ol{
+  margin:0.5em 3em 1em;
+}
+li > ul, li > ol{
+  margin:0 1em;
+}
+li{
+  margin:0.3em 1em;
+  padding-left:0.3em;
+}
+li p{
+  margin:0;
+  padding:0;
+}
+li blockquote p{
+  margin:0.5em;
+}
+pre{
+  margin:0.5em 3em 1em;
+  line-height:1.1;
+  font-size:90%;
+  background:#fff;
+  padding:0.3em;
+}
+pre code{
+  background:none;
+}
+blockquote p{
+  margin:0.5em 3em 1em;
+  padding:0.3em 0.6em;
+  background:#7f8c8d;
+  color:#ecf0f1;
+}
+blockquote p a{
+  color:#f1c40f;
+}
+table{
+  margin:0.5em 5em 1em;
+  background:#fff;
+  line-height:1.8;
+  border-collapse:collapse;
+}
+table thead{
+  background:#1abc9c;
+  color:#ecf0f1;
+}
+table tbody tr{
+  transition:0.5s;
+}
+table th{
+  font-weight:normal;
+  text-align:left;
+  padding:0 1.5em;
+}
+table td{
+  color:#34495e;
+  padding:0 1.5em;
+}
+hr{
+  border:0;
+  height:5px;
+  background:#ecf0f1;
+  margin:1.5em 2em 1em;
+}
+
+ul.center{
+  text-align:center;
+}
+ul.center li{
+  display:inline-block;
+  text-align:center;
+}
+
+@media screen and (min-width: 600px) {
+  #page{
+    width:600px;
+  }
+}
+
